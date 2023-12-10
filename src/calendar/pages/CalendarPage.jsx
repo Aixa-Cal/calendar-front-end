@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Calendar } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-import { Navbar, CalendarEvent, CalendarModal, FabAddNew, FabDelete} from '../';
+import { Navbar, CalendarEventBox, CalendarModal, FabAddNew, FabDelete} from '../';
 
 import { localizer, getMessagesES } from '../../helpers';
 import { useUiStore, useCalendarStore, useAuthStore } from '../../hooks';
@@ -68,7 +68,7 @@ export const CalendarPage = () => {
         messages={ getMessagesES() }
         eventPropGetter={ eventStyleGetter }
         components={{
-          event: CalendarEvent
+          event: CalendarEventBox
         }}
         onDoubleClickEvent={ onDoubleClick }
         onSelectEvent={ onSelect }
